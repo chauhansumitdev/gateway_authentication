@@ -6,8 +6,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import io.jsonwebtoken.security.SignatureException;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.http.HttpHeaders;
@@ -25,9 +25,9 @@ import java.util.List;
 public class AuthFilter implements GatewayFilter {
 
         //@Value("${jwt.secretkey}")
-        private String SECRET_KEY =  "alsjflaksjfdlajdflajdlfjasdlfjladfjljfalsjflaksjfdlajdflajdlfjasdlfjladfjljfalsjflaksjfdlajdflajdlfjasdlfjladfjljf";
+        private String SECRET_KEY = "alsjflaksjfdlajdflajdlfjasdlfjladfjljfalsjflaksjfdlajdflajdlfjasdlfjladfjljfalsjflaksjfdlajdflajdlfjasdlfjladfjljf";
 
-        @Override
+    @Override
         public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
             log.info(" INSIDE GATEWAY FILTER ");
